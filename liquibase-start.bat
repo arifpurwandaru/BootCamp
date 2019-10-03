@@ -1,0 +1,1 @@
+gradlew task eksekusi-liquibase update

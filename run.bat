@@ -1,0 +1,1 @@
+gradlew bootRun -Pargs="--server.port=7070"
