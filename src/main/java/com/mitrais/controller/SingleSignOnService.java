@@ -29,9 +29,6 @@ import com.mitrais.utils.JsonUtil;
 @RequestMapping("/sso")
 public class SingleSignOnService {
 	private static Logger logger = LoggerFactory.getLogger(SingleSignOnService.class);
-	//TODO put as sys config in db
-	private static final String SECRET_KEY="xx123secret321xx";
-
 	@Autowired
 	private UserService userService;
 	
@@ -55,7 +52,6 @@ public class SingleSignOnService {
 			
 			MUser u = userService.get(param.get("userId"));
 			sessionPublisher.setLoginUser(u);
-			//String token = JWTUtil.generateToken(SECRET_KEY, JsonUtil.generateJson(u));
 			resp.setData(u);
 			sessionPublisher.saveSession();
 		}catch(DAOException de) {

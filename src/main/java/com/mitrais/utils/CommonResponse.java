@@ -7,7 +7,8 @@ public class CommonResponse<T> {
 	private T data;
 	
 	public CommonResponse(){
-		
+		respCode = Constants.SUCCESS_CD;
+		respMsg = Constants.SUCCESS_MSG;
 	}
 	
 	public CommonResponse(T data){
